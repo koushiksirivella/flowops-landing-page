@@ -1447,7 +1447,8 @@
             if (SHEETS_WEBHOOK_URL) {
               fetch(SHEETS_WEBHOOK_URL, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain' },
                 body: JSON.stringify({
                   email: email,
                   timestamp: new Date().toISOString(),
